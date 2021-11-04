@@ -96,7 +96,16 @@ An instant messaging service to send text messages, images, and video recordings
 <img src="https://imgur.com/Meoz9Yj.gif" width=250><br>
 
 ## Schema 
-[This section will be completed in Unit 9]
+| Property	| Type | Description |
+|-----------|------|----------------|
+| Conversation ID | String | Unique ID for the text |
+| Sender ID	| String | The person’s ID who sends the message |
+| Message | String | The message being sent |
+| Sent date | String | The date/time of message |
+| Message Kind | String | The type of the message |
+| isRead | Bool | Flag showing the status of message |
+| Receiver ID |	String |The person’s ID who receives the message |
+
 ### Models
 [Add table of models]
 ### Networking
