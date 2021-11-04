@@ -96,6 +96,8 @@ An instant messaging service to send text messages, images, and video recordings
 <img src="https://imgur.com/Meoz9Yj.gif" width=250><br>
 
 ## Schema 
+
+### Models
 | Property	| Type | Description |
 |-----------|------|----------------|
 | Conversation ID | String | Unique ID for the text |
@@ -106,8 +108,6 @@ An instant messaging service to send text messages, images, and video recordings
 | isRead | Bool | Flag showing the status of message |
 | Receiver ID |	String |The person’s ID who receives the message |
 
-### Models
-[Add table of models]
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
