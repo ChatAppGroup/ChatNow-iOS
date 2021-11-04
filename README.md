@@ -109,7 +109,23 @@ An instant messaging service to send text messages, images, and video recordings
 | Receiver ID |	String |The person’s ID who receives the message |
 
 ### Networking
-- [Add list of network requests by screen ]
+#### List of network requests by screen
+   - Profile Screen
+      - (Read/GET) Query logged in Sender ID
+      - (Update/PUT) Update user profile image
+   - Chats Screen
+      - (Read/GET) Query sender for each conversation ID
+      - (Read/GET) Query conversations for Reciever IDs
+   - Contacts Screen
+      - (Read/GET) Query all users other than logged in user
+      - (Create/POST) Create a new conversation
+      - (Read/GET) Query conversations with contacts
+   - Message Screen
+      - (Read/GET) Query all messages in a conversation
+      - (Create/POST) Create a new message
+      - (Read/GET) Query message isRead status
+     
+
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
 
