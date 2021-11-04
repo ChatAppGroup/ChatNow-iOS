@@ -112,7 +112,7 @@ An instant messaging service to send text messages, images, and video recordings
 #### List of network requests by screen
    - Profile Screen
       - (Read/GET) Query logged in Sender ID
-      -          ```swift
+         ```swift
          let query = PFQuery(className:"Post")
          query.whereKey("author", equalTo: currentUser)
          query.order(byDescending: "createdAt")
@@ -124,7 +124,8 @@ An instant messaging service to send text messages, images, and video recordings
            // TODO: Do something with posts...
             }
          }
-         FALSE FALSE FALSE
+         
+         //RE CREATE CODE
          ```
       - (Update/PUT) Update user profile image
    - Chats Screen
