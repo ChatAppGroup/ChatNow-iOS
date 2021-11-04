@@ -13,6 +13,11 @@
 		7E916A9F27347D8900185CA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E916A9D27347D8900185CA5 /* Main.storyboard */; };
 		7E916AA127347D8B00185CA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E916AA027347D8B00185CA5 /* Assets.xcassets */; };
 		7E916AA427347D8B00185CA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E916AA227347D8B00185CA5 /* LaunchScreen.storyboard */; };
+		C7E4C108273492B100646572 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E4C107273492B100646572 /* LoginViewController.swift */; };
+		C7E4C10A2734932800646572 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E4C1092734932800646572 /* SetupViewController.swift */; };
+		C7E4C10C2734933C00646572 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E4C10B2734933C00646572 /* MessagesViewController.swift */; };
+		C7E4C10E2734934D00646572 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E4C10D2734934D00646572 /* ProfileViewController.swift */; };
+		C7E4C1102734935D00646572 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E4C10F2734935D00646572 /* ContactsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		7E916AA027347D8B00185CA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E916AA327347D8B00185CA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E916AA527347D8B00185CA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7E4C107273492B100646572 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C7E4C1092734932800646572 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
+		C7E4C10B2734933C00646572 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		C7E4C10D2734934D00646572 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C7E4C10F2734935D00646572 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +73,11 @@
 				7E916AA027347D8B00185CA5 /* Assets.xcassets */,
 				7E916AA227347D8B00185CA5 /* LaunchScreen.storyboard */,
 				7E916AA527347D8B00185CA5 /* Info.plist */,
+				C7E4C107273492B100646572 /* LoginViewController.swift */,
+				C7E4C1092734932800646572 /* SetupViewController.swift */,
+				C7E4C10B2734933C00646572 /* MessagesViewController.swift */,
+				C7E4C10D2734934D00646572 /* ProfileViewController.swift */,
+				C7E4C10F2734935D00646572 /* ContactsViewController.swift */,
 			);
 			path = ChatNow;
 			sourceTree = "<group>";
@@ -137,9 +152,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7E4C10C2734933C00646572 /* MessagesViewController.swift in Sources */,
+				C7E4C108273492B100646572 /* LoginViewController.swift in Sources */,
 				7E916A9C27347D8900185CA5 /* ViewController.swift in Sources */,
 				7E916A9827347D8900185CA5 /* AppDelegate.swift in Sources */,
+				C7E4C10E2734934D00646572 /* ProfileViewController.swift in Sources */,
+				C7E4C1102734935D00646572 /* ContactsViewController.swift in Sources */,
 				7E916A9A27347D8900185CA5 /* SceneDelegate.swift in Sources */,
+				C7E4C10A2734932800646572 /* SetupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
