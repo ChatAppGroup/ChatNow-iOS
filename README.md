@@ -112,12 +112,26 @@ An instant messaging service to send text messages, images, and video recordings
 #### List of network requests by screen
    - Profile Screen
       - (Read/GET) Query logged in Sender ID
+      -          ```swift
+         let query = PFQuery(className:"Post")
+         query.whereKey("author", equalTo: currentUser)
+         query.order(byDescending: "createdAt")
+         query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
+            if let error = error { 
+               print(error.localizedDescription)
+            } else if let posts = posts {
+               print("Successfully retrieved \(posts.count) posts.")
+           // TODO: Do something with posts...
+            }
+         }
+         FALSE FALSE FALSE
+         ```
       - (Update/PUT) Update user profile image
    - Chats Screen
       - (Read/GET) Query sender for each conversation ID
       - (Read/GET) Query conversations for Reciever IDs
    - Contacts Screen
-      - (Read/GET) Query all users other than logged in user
+      - (Read/GET) Query all users other than logged in user (sender ID)
       - (Create/POST) Create a new conversation
       - (Read/GET) Query conversations with contacts
    - Message Screen
@@ -125,9 +139,6 @@ An instant messaging service to send text messages, images, and video recordings
       - (Create/POST) Create a new message
       - (Read/GET) Query message isRead status
      
-
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
 
 #### List of network requests by screen
    - Home Feed Screen
@@ -154,26 +165,3 @@ An instant messaging service to send text messages, images, and video recordings
    - Profile Screen
       - (Read/GET) Query logged in user object
       - (Update/PUT) Update user profile image
-#### [OPTIONAL:] Existing API Endpoints
-##### An API Of Ice And Fire
-- Base URL - [http://www.anapioficeandfire.com/api](http://www.anapioficeandfire.com/api)
-
-   HTTP Verb | Endpoint | Description
-   ----------|----------|------------
-    `GET`    | /characters | get all characters
-    `GET`    | /characters/?name=name | return specific character by name
-    `GET`    | /houses   | get all houses
-    `GET`    | /houses/?name=name | return specific house by name
-
-##### Game of Thrones API
-- Base URL - [https://api.got.show/api](https://api.got.show/api)
-
-   HTTP Verb | Endpoint | Description
-   ----------|----------|------------
-    `GET`    | /cities | gets all cities
-    `GET`    | /cities/byId/:id | gets specific city by :id
-    `GET`    | /continents | gets all continents
-    `GET`    | /continents/byId/:id | gets specific continent by :id
-    `GET`    | /regions | gets all regions
-    `GET`    | /regions/byId/:id | gets specific region by :id
-    `GET`    | /characters/paths/:name | gets a character's path with a given name
