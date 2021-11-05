@@ -110,33 +110,94 @@ An instant messaging service to send text messages, images, and video recordings
 
 ### Networking
 #### List of network requests by screen
-   - Profile Screen
-      - (Read/GET) Query logged in Sender ID
+
+   - Login Screen
+      - (Read/GET) Query Login details 
          ```swift
-         let query = PFQuery(className:"Post")
-         query.whereKey("author", equalTo: currentUser)
-         query.order(byDescending: "createdAt")
-         query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
-            if let error = error { 
-               print(error.localizedDescription)
-            } else if let posts = posts {
-               print("Successfully retrieved \(posts.count) posts.")
-           // TODO: Do something with posts...
+          guard let email = emailField.text, let password = passwordField.text,
+            !email.isEmpty, !password.isEmpty, password.count >= 6 else {
+                alertUserLoginError()
             }
+
+        Auth.auth().signIn(withEmail: email, password: password) {
+            [weak self] authResult, error in
+             guard let strongSelf = self else { return }
+        }
+
+        ```
+   - Register Screen
+      - (Create/POST) Create a new user
+          ```swift
+         Auth.auth().createUser(withEmail: email, password: password) { 
+             authResult, error in
+             //TODO: Upon creating user
          }
-         
-         //RE CREATE CODE
+
          ```
+   - Profile Screen
+      - (Read/GET) Query User Information
+          ```swift
+         handle = Auth.auth().addStateDidChangeListener { 
+                auth, user in     
+                if Auth.auth().currentUser != nil {
+                  // User is signed in.
+                  // ...
+                } else {
+                    
+                }
+    
+          ```
+         
+                  
+
       - (Update/PUT) Update user profile image
+       ```swift
+          let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+                                          
+       ```                                                
    - Chats Screen
       - (Read/GET) Query sender for each conversation ID
+      ```swift
+         let userInfo = Auth.auth().currentUser?.providerData[indexPath.row]
+
+      ```
       - (Read/GET) Query conversations for Reciever IDs
+      ```swift
+         let userInfo = Auth.auth().currentUser?.providerData[indexPath.row]
+
+      ```
    - Contacts Screen
       - (Read/GET) Query all users other than logged in user (sender ID)
+      ```swift
+         let userInfo = Auth.auth().currentUser?.providerData[indexPath.row]
+
+      ```
       - (Create/POST) Create a new conversation
+      ```swift
+          let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+
+      ```
       - (Read/GET) Query conversations with contacts
+      ```swift
+         let userInfo = Auth.auth().currentUser?.providerData[indexPath.row]
+
+      ```
    - Message Screen
       - (Read/GET) Query all messages in a conversation
+      ```swift
+        let userInfo = Auth.auth().currentUser?.providerData[indexPath.row]
+        
+      ```
       - (Create/POST) Create a new message
+      ```swift
+          let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+
+      ```
       - (Read/GET) Query message isRead status
+      ```swift
+         let userInfo = Auth.auth().currentUser?.providerData[indexPath.row]
+
+      ```
      
+
+
