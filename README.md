@@ -190,7 +190,7 @@ An instant messaging service to send text messages, images, and video recordings
       ```
       - (Create/POST) Create a new message
       ```swift
-          let createMessageID = Auth.auth().currentUser?.createProfileChangeRequest()
+         let createMessageID = Auth.auth().currentUser?.createProfileChangeRequest()
 
       ```
       - (Read/GET) Query message isRead status
