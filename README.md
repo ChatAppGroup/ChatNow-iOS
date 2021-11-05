@@ -169,33 +169,33 @@ An instant messaging service to send text messages, images, and video recordings
    - Contacts Screen
       - (Read/GET) Query all users other than logged in user (sender ID)
       ```swift
-         let userInfo = Auth.auth().currentUser?.providerData[indexPath.row]
+         let receiverID = Auth.auth().currentUser?.providerData[indexPath.row]
 
       ```
       - (Create/POST) Create a new conversation
       ```swift
-          let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+          let createConversation = Auth.auth().currentUser?.createProfileChangeRequest()
 
       ```
       - (Read/GET) Query conversations with contacts
       ```swift
-         let userInfo = Auth.auth().currentUser?.providerData[indexPath.row]
+         let conversationID = Auth.auth().currentUser?.providerData[indexPath.row]
 
       ```
    - Message Screen
       - (Read/GET) Query all messages in a conversation
       ```swift
-        let userInfo = Auth.auth().currentUser?.providerData[indexPath.row]
+        let messageID = Auth.auth().currentUser?.providerData[indexPath.row]
         
       ```
       - (Create/POST) Create a new message
       ```swift
-          let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+          let createMessageID = Auth.auth().currentUser?.createProfileChangeRequest()
 
       ```
       - (Read/GET) Query message isRead status
       ```swift
-         let userInfo = Auth.auth().currentUser?.providerData[indexPath.row]
+         let isRead = Auth.auth().currentUser?.providerData[indexPath.row]
 
       ```
      
