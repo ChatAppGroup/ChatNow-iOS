@@ -262,7 +262,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="account_profile" width="25" height="25"/>
+        <image name="account_profile" width="128" height="128"/>
         <image name="messages_btn" width="25" height="25"/>
         <image name="person.crop.rectangle.fill" catalog="system" width="128" height="93"/>
         <image name="profile_tab" width="25" height="25"/>
