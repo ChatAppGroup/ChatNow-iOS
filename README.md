@@ -95,6 +95,29 @@ An instant messaging service to send text messages, images, and video recordings
 
 <img src="https://imgur.com/Meoz9Yj.gif" width=250><br>
 
+## Video Walkthroughs
+
+### Sprint 1 Video Walkthrough
+Here's a walkthrough of implemented user stories:
+
+<img src='' title='Video Walkthrough' width='' alt='Video Walkthrough 1' />
+
+### Sprint 2 Video Walkthrough
+Here's a walkthrough of implemented user stories:
+
+<img src='' title='Video Walkthrough' width='' alt='Video Walkthrough 2' />
+
+### Sprint 3 Video Walkthrough
+Here's a walkthrough of implemented user stories:
+
+<img src='' title='Video Walkthrough' width='' alt='Video Walkthrough 3' />
+
+### Sprint 4 Video Walkthrough
+Here's a walkthrough of implemented user stories:
+
+<img src='' title='Video Walkthrough' width='' alt='Video Walkthrough 4' />
+
+
 ## Schema 
 
 ### Models
