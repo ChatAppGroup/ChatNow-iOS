@@ -107,7 +107,7 @@ The following **required** functionality is completed:
 - [x] User can view Messages Screen
 
 The following **bonus** functionality is completed:
-- [ ]User Login or Registration is persistent
+- [x] User Login or Registration is persistent
 
 ### Sprint 1 Video Walkthrough
 Here's a walkthrough of implemented user stories:
