@@ -117,7 +117,7 @@ Here's a walkthrough of implemented user stories:
 ### Sprint 2 User Stories
 The following **required** functionality is completed:
 
-- [ ]
+- [ ] User can ...
 
 ### Sprint 2 Video Walkthrough
 Here's a walkthrough of implemented user stories:
@@ -128,7 +128,7 @@ Here's a walkthrough of implemented user stories:
 ### Sprint 3 User Stories
 The following **required** functionality is completed:
 
-- [ ]
+- [ ] User can ...
 
 ### Sprint 3 Video Walkthrough
 Here's a walkthrough of implemented user stories:
@@ -139,9 +139,10 @@ Here's a walkthrough of implemented user stories:
 ### Sprint 4 User Stories
 The following **required** functionality is completed:
 
-- [ ]
+- [ ] User can ...
+
 The following **bonus** functionality is completed:
-- [ ]
+- [ ] User can ...
 
 ### Sprint 4 Video Walkthrough
 Here's a walkthrough of implemented user stories:
