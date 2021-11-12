@@ -7,7 +7,7 @@ CHATNOW Design Project - README
 1. [Overview](#Overview)
 1. [Product Spec](#Product-Spec)
 1. [Wireframes](#Wireframes)
-2. [User Stories & Video Walkthroughs](#User-Stories-&-Video-Walkthroughs)
+2. [User Stories & Video Walkthroughs](#User Stories & Video Walkthroughs)
 3. [Schema](#Schema)
 
 ## Overview
