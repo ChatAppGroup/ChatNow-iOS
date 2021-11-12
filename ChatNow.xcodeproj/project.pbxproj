@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		7E916A9F27347D8900185CA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E916A9D27347D8900185CA5 /* Main.storyboard */; };
 		7E916AA127347D8B00185CA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E916AA027347D8B00185CA5 /* Assets.xcassets */; };
 		7E916AA427347D8B00185CA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E916AA227347D8B00185CA5 /* LaunchScreen.storyboard */; };
+		C7D4FED0273DFDD000B4B9FF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7D4FECF273DFDD000B4B9FF /* GoogleService-Info.plist */; };
 		C7E4C108273492B100646572 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E4C107273492B100646572 /* LoginViewController.swift */; };
 		C7E4C10A2734932800646572 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E4C1092734932800646572 /* SetupViewController.swift */; };
 		C7E4C10C2734933C00646572 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E4C10B2734933C00646572 /* MessagesViewController.swift */; };
@@ -32,6 +33,7 @@
 		7E916AA327347D8B00185CA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E916AA527347D8B00185CA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3DD2C4CE5EE4CAB9F6F3A8E /* Pods-ChatNow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatNow.release.xcconfig"; path = "Target Support Files/Pods-ChatNow/Pods-ChatNow.release.xcconfig"; sourceTree = "<group>"; };
+		C7D4FECF273DFDD000B4B9FF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C7E4C107273492B100646572 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C7E4C1092734932800646572 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		C7E4C10B2734933C00646572 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				C7E4C10B2734933C00646572 /* MessagesViewController.swift */,
 				C7E4C10D2734934D00646572 /* ProfileViewController.swift */,
 				C7E4C10F2734935D00646572 /* ContactsViewController.swift */,
+				C7D4FECF273DFDD000B4B9FF /* GoogleService-Info.plist */,
 			);
 			path = ChatNow;
 			sourceTree = "<group>";
@@ -103,7 +106,6 @@
 				EE83B6C62B245DA1D186B54B /* Pods-ChatNow.debug.xcconfig */,
 				A3DD2C4CE5EE4CAB9F6F3A8E /* Pods-ChatNow.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -167,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E916AA427347D8B00185CA5 /* LaunchScreen.storyboard in Resources */,
+				C7D4FED0273DFDD000B4B9FF /* GoogleService-Info.plist in Resources */,
 				7E916AA127347D8B00185CA5 /* Assets.xcassets in Resources */,
 				7E916A9F27347D8900185CA5 /* Main.storyboard in Resources */,
 			);

@@ -129,7 +129,7 @@
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
                                     <action selector="onSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vNg-OO-iX8"/>
-                                    <segue destination="eSx-er-B2S" kind="presentation" id="1ZX-cp-uAN"/>
+                                    <segue destination="eSx-er-B2S" kind="presentation" id="dGi-4y-oq7"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ChatNow" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ctx-nq-clN">
@@ -145,7 +145,7 @@
                                 <state key="normal" title="Sign in"/>
                                 <connections>
                                     <action selector="onSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gan-C1-Lu7"/>
-                                    <segue destination="eTS-6D-U09" kind="presentation" id="1M8-T2-wXl"/>
+                                    <segue destination="eTS-6D-U09" kind="presentation" identifier="loginSegue" id="1M8-T2-wXl"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -153,8 +153,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="emailField" destination="52V-qI-xlB" id="GtY-m1-2Gn"/>
                         <outlet property="passwordField" destination="bxf-CS-4Aj" id="LWD-w3-cSF"/>
-                        <outlet property="usernameField" destination="52V-qI-xlB" id="B9x-3c-mQK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

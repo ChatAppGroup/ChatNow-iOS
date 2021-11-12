@@ -6,12 +6,13 @@
 //
 
 import UIKit
-//import FirebaseAuth
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
 
     
-    @IBOutlet weak var usernameField: UITextField!
+ 
+    @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
     
@@ -24,12 +25,41 @@ class LoginViewController: UIViewController {
   
 
     @IBAction func onSignIn(_ sender: Any) {
+        let email = emailField.text!
+        let password = passwordField.text!
+        
+        Auth.auth().signIn(withEmail: email, password: password) {
+           [weak self] authResult, error in
+            guard let strongSelf = self else
+            {
+                return
+                
+            }
+        }
         
     }
     
     
     @IBAction func onSignUp(_ sender: Any) {
+        let email = emailField.text!
+        let password = passwordField.text!
         
+        
+        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+            if(error != nil) {
+                print("User not created")
+                return
+            }
+            print("User created")
+        }
+        
+       
+            /*
+            let board = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard?.instantiateViewController(identifier: "mainTab")
+            vc?.modalPresentationStyle = .overFullScreen
+            self.present(vc!, animated: true)
+ */
     }
     
     
@@ -44,3 +74,5 @@ class LoginViewController: UIViewController {
     */
 
 }
+
+
