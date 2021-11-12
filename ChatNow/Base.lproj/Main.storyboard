@@ -128,8 +128,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
-                                    <action selector="onSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vNg-OO-iX8"/>
-                                    <segue destination="eSx-er-B2S" kind="presentation" id="dGi-4y-oq7"/>
+                                    <action selector="onSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Z2-eK-zX3"/>
+                                    <segue destination="eTS-6D-U09" kind="presentation" identifier="signupSegue" id="fDu-k9-dl9"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ChatNow" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ctx-nq-clN">
@@ -229,7 +229,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Rll-er-l1h">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="eSx-er-B2S" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="register" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eSx-er-B2S" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Z2-oE-svC">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -286,6 +286,9 @@
             <point key="canvasLocation" x="-1926.0869565217392" y="1546.875"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="fDu-k9-dl9"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="account_profile" width="128" height="128"/>
         <image name="messages_btn" width="25" height="25"/>
