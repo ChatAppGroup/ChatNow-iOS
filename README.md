@@ -95,22 +95,53 @@ An instant messaging service to send text messages, images, and video recordings
 
 <img src="https://imgur.com/Meoz9Yj.gif" width=250><br>
 
-## Video Walkthroughs
+## User Stories & Video Walkthroughs
+
+
+### Sprint 1 User Stories
+The following **required** functionality is completed:
+
+- [x] User can Login 
+- [x] User can Register
+- [x] User can view Profile Screen
+- [x] User can view Messages Screen
+
+The following **bonus** functionality is completed:
+- [ ]User Login or Registration is persistent
 
 ### Sprint 1 Video Walkthrough
 Here's a walkthrough of implemented user stories:
 
-<img src='' title='Video Walkthrough' width='' alt='Video Walkthrough 1' />
+<img src='https://imgur.com/kCv17UH.gif' title='Video Walkthrough' width='' alt='Video Walkthrough 1' />
+
+### Sprint 2 User Stories
+The following **required** functionality is completed:
+
+- [ ]
 
 ### Sprint 2 Video Walkthrough
 Here's a walkthrough of implemented user stories:
 
 <img src='' title='Video Walkthrough' width='' alt='Video Walkthrough 2' />
 
+
+### Sprint 3 User Stories
+The following **required** functionality is completed:
+
+- [ ]
+
 ### Sprint 3 Video Walkthrough
 Here's a walkthrough of implemented user stories:
 
 <img src='' title='Video Walkthrough' width='' alt='Video Walkthrough 3' />
+
+
+### Sprint 4 User Stories
+The following **required** functionality is completed:
+
+- [ ]
+The following **bonus** functionality is completed:
+- [ ]
 
 ### Sprint 4 Video Walkthrough
 Here's a walkthrough of implemented user stories:
