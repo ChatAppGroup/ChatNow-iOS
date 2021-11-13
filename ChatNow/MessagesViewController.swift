@@ -16,6 +16,11 @@ class MessagesViewController: UIViewController {
     }
     
 
+    @IBAction func logOutAction(_ sender: Any) {
+        
+        UserDefaults.standard.setValue(false, forKey: "loggedin")
+        self.dismiss(animated: true, completion: nil )
+    }
     /*
     // MARK: - Navigation
 

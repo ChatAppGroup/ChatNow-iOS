@@ -22,6 +22,11 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        if UserDefaults.standard.bool(forKey: "loggedin") == true {
+            self.performSegue(withIdentifier: "loginSegue", sender: self)
+        }
+    }
     /*
     // MARK: - Navigation
 
@@ -65,6 +70,14 @@ class LoginViewController: UIViewController {
         
         Auth.auth().signIn(withEmail: email, password: password) {
            [weak self] authResult, error in
+            if error == nil{
+                UserDefaults.standard.set(true, forKey: "loggedin")
+                    self?.performSegue(withIdentifier: "loginSegue", sender: self)
+            }
+            else{
+                print("error in login")
+                return
+            }
             guard let strongSelf = self else
             {
                 return

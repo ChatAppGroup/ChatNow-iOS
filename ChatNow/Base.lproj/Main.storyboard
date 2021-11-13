@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -145,7 +146,6 @@
                                 <state key="normal" title="Sign in"/>
                                 <connections>
                                     <action selector="onSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gan-C1-Lu7"/>
-                                    <segue destination="eTS-6D-U09" kind="presentation" identifier="loginSegue" id="1M8-T2-wXl"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -155,6 +155,7 @@
                     <connections>
                         <outlet property="emailField" destination="52V-qI-xlB" id="GtY-m1-2Gn"/>
                         <outlet property="passwordField" destination="bxf-CS-4Aj" id="LWD-w3-cSF"/>
+                        <segue destination="eTS-6D-U09" kind="presentation" identifier="loginSegue" id="lMa-T0-jaH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -192,17 +193,23 @@
             </objects>
             <point key="canvasLocation" x="-352" y="2271"/>
         </scene>
-        <!--View Controller-->
+        <!--Messages View Controller-->
         <scene sceneID="JFJ-Fj-pdT">
             <objects>
-                <viewController id="eOc-4a-Sfh" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MessagesViewController" id="eOc-4a-Sfh" customClass="MessagesViewController" customModule="ChatNow" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nFb-HU-5zd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="hJQ-2t-uf3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="422-Ha-zNP"/>
+                    <navigationItem key="navigationItem" id="422-Ha-zNP">
+                        <barButtonItem key="leftBarButtonItem" title="LogOut" id="sz9-bh-bxY">
+                            <connections>
+                                <action selector="logOutAction:" destination="eOc-4a-Sfh" id="foP-6a-UJc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LaJ-z9-t2x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -212,6 +219,7 @@
         <scene sceneID="51z-rA-diz">
             <objects>
                 <tabBarController storyboardIdentifier="mainTab" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eTS-6D-U09" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ODv-oO-ng7"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="01l-L8-OAX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -287,7 +295,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="fDu-k9-dl9"/>
+        <segue reference="lMa-T0-jaH"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="account_profile" width="128" height="128"/>
