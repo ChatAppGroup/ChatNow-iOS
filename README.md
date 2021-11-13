@@ -7,7 +7,7 @@ CHATNOW Design Project - README
 1. [Overview](#Overview)
 1. [Product Spec](#Product-Spec)
 1. [Wireframes](#Wireframes)
-2. [User Stories & Video Walkthroughs](https://github.com/ChatAppGroup/ChatNow-iOS/blob/main/README.md#user-stories--video-walkthroughs)
+2. [User Stories & Video Walkthroughs](#user-stories--video-walkthroughs)
 3. [Schema](#Schema)
 
 ## Overview
