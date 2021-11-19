@@ -20,8 +20,13 @@ class SetupViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    
+    @IBAction func loginFromregister(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func signUpConfirm(_ sender: Any) {
+        
         if emailField.text?.isEmpty == true {
             print("No text in email field")
             return
@@ -30,13 +35,35 @@ class SetupViewController: UIViewController {
             print("No text in password field")
             return
         }
+        else {
+            
+            let email = emailField.text!
+            let password = passwordField.text!
+            
+            Auth.auth().createUser(withEmail: email, password: password) {
+               [weak self] authResult, error in
+                
+                if error == nil{
+                    
+                        self?.performSegue(withIdentifier: "loginSegue", sender: self)
+                }
+                else{
+                    print(error)
+                    return
+                }
+                guard let strongSelf = self else
+                {
+                    return
+                }
+            }
+        }
         
-        signUp()
+//        signUp()
     }
     
-    func signUp() {
-      
-        }
+//    func signUp() {
+//
+//        }
         
         
     }

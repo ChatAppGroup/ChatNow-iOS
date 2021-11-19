@@ -52,16 +52,9 @@ class LoginViewController: UIViewController {
 ////            print("User created")
 //        }
     @IBAction func onSignUp(_ sender: Any) {
-        let email = emailField.text!
-        let password = passwordField.text!
         
-        Auth.auth().createUser(withEmail: email, password: password) {
-           [weak self] authResult, error in
-            guard let strongSelf = self else
-            {
-                return
-            }
-        }
+        self.performSegue(withIdentifier: "signUpSegue", sender: self)
+        
     }
     
     @IBAction func onSignIn(_ sender: Any) {
@@ -72,6 +65,7 @@ class LoginViewController: UIViewController {
            [weak self] authResult, error in
             if error == nil{
                 UserDefaults.standard.set(true, forKey: "loggedin")
+                UserDefaults.standard.set(email, forKey: "userName")
                     self?.performSegue(withIdentifier: "loginSegue", sender: self)
             }
             else{
