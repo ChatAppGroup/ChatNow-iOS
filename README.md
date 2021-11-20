@@ -118,9 +118,9 @@ Here's a walkthrough of implemented user stories:
 ### Sprint 2 User Stories
 The following **required** functionality is completed:
 
-- [ ] User can Access Local Messages
-- [ ] User can Acess Profile Information
-- [ ] User can Access Specialized Sign Up Screen
+- [x] User can Access Local Messages
+- [x] User can Acess Profile Information
+- [x] User can Access Specialized Sign Up Screen
 
 
 ### Sprint 2 Video Walkthrough
