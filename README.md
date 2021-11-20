@@ -118,12 +118,15 @@ Here's a walkthrough of implemented user stories:
 ### Sprint 2 User Stories
 The following **required** functionality is completed:
 
-- [ ] User can ...
+- [ ] User can Access Local Messages
+- [ ] User can Acess Profile Information
+- [ ] User can Access Specialized Sign Up Screen
+
 
 ### Sprint 2 Video Walkthrough
 Here's a walkthrough of implemented user stories:
 
-<img src='' title='Video Walkthrough' width='' alt='Video Walkthrough 2' />
+<img src='https://imgur.com/cN3yIL4.gif' title='Video Walkthrough' width='' alt='Video Walkthrough 2' />
 
 
 ### Sprint 3 User Stories
