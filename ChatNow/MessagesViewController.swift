@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class MessagesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
   
@@ -17,13 +18,20 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "MessageCell")
         tableView.delegate = self
         tableView.dataSource = self
+        
+        DatabaseManager.shared.test()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func tapOnContacts(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "contactsScreen", sender: self)
+    }
+    
     @IBAction func logOutAction(_ sender: Any) {
         
+//        FirebaseAuth.Auth.auth().currentUser = nil
         UserDefaults.standard.setValue(false, forKey: "loggedin")
         self.dismiss(animated: true, completion: nil )
     }
@@ -45,15 +53,4 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
     
     
     
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
