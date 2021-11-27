@@ -132,12 +132,14 @@ Here's a walkthrough of implemented user stories:
 ### Sprint 3 User Stories
 The following **required** functionality is completed:
 
-- [ ] User can ...
+- [x] User can Access Contacts
+- [x] User can Access Conversations
+- [x] User can Logout
 
 ### Sprint 3 Video Walkthrough
 Here's a walkthrough of implemented user stories:
 
-<img src='' title='Video Walkthrough' width='' alt='Video Walkthrough 3' />
+<img src='https://imgur.com/OQ2yBPK.gif' title='Video Walkthrough' width='' alt='Video Walkthrough 3' />
 
 
 ### Sprint 4 User Stories
