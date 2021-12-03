@@ -20,6 +20,9 @@
 		C7E4C10E2734934D00646572 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E4C10D2734934D00646572 /* ProfileViewController.swift */; };
 		C7E4C1102734935D00646572 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E4C10F2734935D00646572 /* ContactsViewController.swift */; };
 		E679259D6C2142944CC087D4 /* Pods_ChatNow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78F92044B0AA1D3934AD8B5D /* Pods_ChatNow.framework */; };
+		EA00E4FF274F430E0037FE41 /* ContactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00E4FE274F430E0037FE41 /* ContactsTableViewCell.swift */; };
+		EA00E503274F88440037FE41 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00E502274F88440037FE41 /* ChatViewController.swift */; };
+		EA88C2AA274A3CC1001051E6 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA88C2A9274A3CC1001051E6 /* DatabaseManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,9 @@
 		C7E4C10B2734933C00646572 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		C7E4C10D2734934D00646572 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C7E4C10F2734935D00646572 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		EA00E4FE274F430E0037FE41 /* ContactsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewCell.swift; sourceTree = "<group>"; };
+		EA00E502274F88440037FE41 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		EA88C2A9274A3CC1001051E6 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		EE83B6C62B245DA1D186B54B /* Pods-ChatNow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatNow.debug.xcconfig"; path = "Target Support Files/Pods-ChatNow/Pods-ChatNow.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,6 +102,9 @@
 				C7E4C10D2734934D00646572 /* ProfileViewController.swift */,
 				C7E4C10F2734935D00646572 /* ContactsViewController.swift */,
 				C7D4FECF273DFDD000B4B9FF /* GoogleService-Info.plist */,
+				EA88C2A9274A3CC1001051E6 /* DatabaseManager.swift */,
+				EA00E4FE274F430E0037FE41 /* ContactsTableViewCell.swift */,
+				EA00E502274F88440037FE41 /* ChatViewController.swift */,
 			);
 			path = ChatNow;
 			sourceTree = "<group>";
@@ -226,12 +235,15 @@
 			files = (
 				C7E4C10C2734933C00646572 /* MessagesViewController.swift in Sources */,
 				C7E4C108273492B100646572 /* LoginViewController.swift in Sources */,
+				EA00E503274F88440037FE41 /* ChatViewController.swift in Sources */,
+				EA00E4FF274F430E0037FE41 /* ContactsTableViewCell.swift in Sources */,
 				7E916A9C27347D8900185CA5 /* ViewController.swift in Sources */,
 				7E916A9827347D8900185CA5 /* AppDelegate.swift in Sources */,
 				C7E4C10E2734934D00646572 /* ProfileViewController.swift in Sources */,
 				C7E4C1102734935D00646572 /* ContactsViewController.swift in Sources */,
 				7E916A9A27347D8900185CA5 /* SceneDelegate.swift in Sources */,
 				C7E4C10A2734932800646572 /* SetupViewController.swift in Sources */,
+				EA88C2AA274A3CC1001051E6 /* DatabaseManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

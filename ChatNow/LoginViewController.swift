@@ -26,7 +26,14 @@ class LoginViewController: UIViewController {
         if UserDefaults.standard.bool(forKey: "loggedin") == true {
             self.performSegue(withIdentifier: "loginSegue", sender: self)
         }
+//        validateAuth()
     }
+    
+//    private func validateAuth() {
+//        if FirebaseAuth.Auth.auth().currentUser != nil {
+//            self.performSegue(withIdentifier: "loginSegue", sender: self)
+//        }
+//    }
     /*
     // MARK: - Navigation
 
