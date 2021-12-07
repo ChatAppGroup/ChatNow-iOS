@@ -44,24 +44,8 @@ class LoginViewController: UIViewController {
     }
     */
     
-//    @IBAction func onSignUp(_ sender: Any) {
-//
-//
-////        let email = emailField.text!
-////        let password = passwordField.text!
-////
-////
-////        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-////            if(error != nil) {
-////                print("User not created")
-////                return
-////            }
-////            print("User created")
-//        }
     @IBAction func onSignUp(_ sender: Any) {
-        
         self.performSegue(withIdentifier: "signUpSegue", sender: self)
-        
     }
     
     @IBAction func onSignIn(_ sender: Any) {
@@ -86,15 +70,5 @@ class LoginViewController: UIViewController {
         }
 
     }
-    
-    
-   
-        
-       
-            /*
-            let board = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard?.instantiateViewController(identifier: "mainTab")
-            vc?.modalPresentationStyle = .overFullScreen
-            self.present(vc!, animated: true)
- */
-    }
+
+}

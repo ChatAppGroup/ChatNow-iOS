@@ -89,10 +89,11 @@
 		7E916A9627347D8900185CA5 /* ChatNow */ = {
 			isa = PBXGroup;
 			children = (
+				7EEE6B56275F0176006E0876 /* ViewModels */,
+				7EEE6B55275F0141006E0876 /* Models */,
 				7EEE6B53275EFC93006E0876 /* Views */,
 				7EEE6B52275EFC85006E0876 /* Controllers */,
 				7EEE6B51275EFC6C006E0876 /* Resources */,
-				7E916AA027347D8B00185CA5 /* Assets.xcassets */,
 				7E916AA527347D8B00185CA5 /* Info.plist */,
 				C7D4FECF273DFDD000B4B9FF /* GoogleService-Info.plist */,
 				EA88C2A9274A3CC1001051E6 /* DatabaseManager.swift */,
@@ -113,9 +114,8 @@
 		7EEE6B52275EFC85006E0876 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7EEE6B57275F0458006E0876 /* Startup */,
 				7E916A9B27347D8900185CA5 /* ViewController.swift */,
-				C7E4C107273492B100646572 /* LoginViewController.swift */,
-				C7E4C1092734932800646572 /* SetupViewController.swift */,
 				C7E4C10D2734934D00646572 /* ProfileViewController.swift */,
 				C7E4C10B2734933C00646572 /* MessagesViewController.swift */,
 				C7E4C10F2734935D00646572 /* ContactsViewController.swift */,
@@ -127,6 +127,7 @@
 		7EEE6B53275EFC93006E0876 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7E916AA027347D8B00185CA5 /* Assets.xcassets */,
 				7EEE6B54275EFC9B006E0876 /* Storyboards */,
 			);
 			path = Views;
@@ -139,6 +140,29 @@
 				7E916AA227347D8B00185CA5 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		7EEE6B55275F0141006E0876 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7EEE6B56275F0176006E0876 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		7EEE6B57275F0458006E0876 /* Startup */ = {
+			isa = PBXGroup;
+			children = (
+				C7E4C107273492B100646572 /* LoginViewController.swift */,
+				C7E4C1092734932800646572 /* SetupViewController.swift */,
+			);
+			path = Startup;
 			sourceTree = "<group>";
 		};
 		EB0AB21613AFB12E564A4C65 /* Pods */ = {
