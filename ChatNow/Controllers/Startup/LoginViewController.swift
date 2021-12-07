@@ -2,38 +2,47 @@
 //  LoginViewController.swift
 //  ChatNow
 //
-//  Created by David  on 11/4/21.
+//  Created by David on 12/7/21.
 //
 
 import UIKit
 import FirebaseAuth
 
 class LoginViewController: UIViewController {
-
     
- 
+    private let imageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "logo")
+        imageView.contentMode = .scaleAspectFit
+        return imageView
+    }()
+
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+        title = "Log in"
+        view.backgroundColor = .white
+       
+        //Add subviews
+        view.addSubview(imageView)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        let size = view.width/3
+        imageView.frame = CGRect(x: (view.width - size)/2, y: 150, width: size, height: size)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         if UserDefaults.standard.bool(forKey: "loggedin") == true {
             self.performSegue(withIdentifier: "loginSegue", sender: self)
         }
-//        validateAuth()
     }
-    
-//    private func validateAuth() {
-//        if FirebaseAuth.Auth.auth().currentUser != nil {
-//            self.performSegue(withIdentifier: "loginSegue", sender: self)
-//        }
-//    }
+
     /*
     // MARK: - Navigation
 
@@ -47,6 +56,7 @@ class LoginViewController: UIViewController {
     @IBAction func onSignUp(_ sender: Any) {
         self.performSegue(withIdentifier: "signUpSegue", sender: self)
     }
+    
     
     @IBAction func onSignIn(_ sender: Any) {
         let email = emailField.text!
@@ -68,7 +78,5 @@ class LoginViewController: UIViewController {
                 return
             }
         }
-
     }
-
 }

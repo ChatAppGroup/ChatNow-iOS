@@ -2,7 +2,7 @@
 //  SetupViewController.swift
 //  ChatNow
 //
-//  Created by David  on 11/4/21.
+//  Created by David on 12/7/21.
 //
 
 import UIKit
@@ -11,6 +11,7 @@ import Firebase
 
 class SetupViewController: UIViewController {
 
+    @IBOutlet weak var imageField: UIImageView!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
@@ -18,8 +19,20 @@ class SetupViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        title = "Create Account"
+        view.backgroundColor = .white
+       
+        
+        //Add subviews
+        view.addSubview(imageField)
+        
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(didTapChangeProfilePic))
+        imageField.addGestureRecognizer(gesture)
     }
     
+    @objc private func didTapChangeProfilePic(){
+        presentPhotoActionSheet()
+    }
     
     @IBAction func loginFromregister(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -57,33 +70,50 @@ class SetupViewController: UIViewController {
                 }
             }
         }
-        
-//        signUp()
+    }
+}
+
+extension SetupViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    
+    func presentPhotoActionSheet(){
+        let actionSheet = UIAlertController(title: "Profile Picture", message: "How would you like ot select a picture", preferredStyle: .actionSheet)
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        actionSheet.addAction(UIAlertAction(title: "Take Photo", style: .default, handler: { _ in
+            self.presentCamera()
+        }))
+        actionSheet.addAction(UIAlertAction(title: "Choose Photo", style: .default, handler: { _ in
+            self.presentPhotoPicker()
+        }))
+        present(actionSheet, animated: true)
     }
     
-//    func signUp() {
-//
-//        }
-        
-        
+    func presentCamera(){
+        let vc = UIImagePickerController()
+        vc.sourceType = .camera
+        vc.delegate = self
+        vc.allowsEditing = true
+        present(vc, animated: true)
     }
     
-/*
-    @IBAction func alreadyHaveAccountLogin(_ sender: Any) {
-        let board = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard?.instantiateViewController(identifier: "login")
-        vc?.modalPresentationStyle = .overFullScreen
-        self.present(vc!, animated: true)
+    func presentPhotoPicker(){
+        let vc = UIImagePickerController()
+        vc.sourceType = .photoLibrary
+        vc.delegate = self
+        vc.allowsEditing = true
+        present(vc, animated: true)
     }
-    */
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+//        print(info)
+        picker.dismiss(animated: true, completion: nil)
+        
+        guard let selectedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else {
+            return
+        }
+        self.imageField.image = selectedImage
     }
-    */
-
-
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+}
