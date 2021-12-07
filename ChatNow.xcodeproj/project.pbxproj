@@ -89,24 +89,56 @@
 		7E916A9627347D8900185CA5 /* ChatNow */ = {
 			isa = PBXGroup;
 			children = (
-				7E916A9727347D8900185CA5 /* AppDelegate.swift */,
-				7E916A9927347D8900185CA5 /* SceneDelegate.swift */,
-				7E916A9B27347D8900185CA5 /* ViewController.swift */,
-				7E916A9D27347D8900185CA5 /* Main.storyboard */,
+				7EEE6B53275EFC93006E0876 /* Views */,
+				7EEE6B52275EFC85006E0876 /* Controllers */,
+				7EEE6B51275EFC6C006E0876 /* Resources */,
 				7E916AA027347D8B00185CA5 /* Assets.xcassets */,
-				7E916AA227347D8B00185CA5 /* LaunchScreen.storyboard */,
 				7E916AA527347D8B00185CA5 /* Info.plist */,
-				C7E4C107273492B100646572 /* LoginViewController.swift */,
-				C7E4C1092734932800646572 /* SetupViewController.swift */,
-				C7E4C10B2734933C00646572 /* MessagesViewController.swift */,
-				C7E4C10D2734934D00646572 /* ProfileViewController.swift */,
-				C7E4C10F2734935D00646572 /* ContactsViewController.swift */,
 				C7D4FECF273DFDD000B4B9FF /* GoogleService-Info.plist */,
 				EA88C2A9274A3CC1001051E6 /* DatabaseManager.swift */,
 				EA00E4FE274F430E0037FE41 /* ContactsTableViewCell.swift */,
-				EA00E502274F88440037FE41 /* ChatViewController.swift */,
 			);
 			path = ChatNow;
+			sourceTree = "<group>";
+		};
+		7EEE6B51275EFC6C006E0876 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7E916A9927347D8900185CA5 /* SceneDelegate.swift */,
+				7E916A9727347D8900185CA5 /* AppDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7EEE6B52275EFC85006E0876 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7E916A9B27347D8900185CA5 /* ViewController.swift */,
+				C7E4C107273492B100646572 /* LoginViewController.swift */,
+				C7E4C1092734932800646572 /* SetupViewController.swift */,
+				C7E4C10D2734934D00646572 /* ProfileViewController.swift */,
+				C7E4C10B2734933C00646572 /* MessagesViewController.swift */,
+				C7E4C10F2734935D00646572 /* ContactsViewController.swift */,
+				EA00E502274F88440037FE41 /* ChatViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7EEE6B53275EFC93006E0876 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7EEE6B54275EFC9B006E0876 /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7EEE6B54275EFC9B006E0876 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				7E916A9D27347D8900185CA5 /* Main.storyboard */,
+				7E916AA227347D8B00185CA5 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		EB0AB21613AFB12E564A4C65 /* Pods */ = {
