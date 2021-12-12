@@ -145,15 +145,22 @@ Here's a walkthrough of implemented user stories:
 ### Sprint 4 User Stories
 The following **required** functionality is completed:
 
-- [ ] User can ...
+- [x] Users can Create Conversations
+- [x] Users Conversations are responsive and in Realtime
+- [x] Users have Access to only Conversations they are involved in
+- [x] User Messages have publish date
+- [x] User Messages stored in a JSON File on Firebase
+
 
 The following **bonus** functionality is completed:
-- [ ] User can ...
+- [x] Users can send location in messages
+- [x] Users can send audio in messages
+- [x] Users can send video in  messages
 
 ### Sprint 4 Video Walkthrough
 Here's a walkthrough of implemented user stories:
 
-<img src='' title='Video Walkthrough' width='' alt='Video Walkthrough 4' />
+<img src='https://imgur.com/hHxoxyT.gif' title='Video Walkthrough' width='' alt='Video Walkthrough 4' />
 
 
 ## Schema 
@@ -208,57 +215,22 @@ Here's a walkthrough of implemented user stories:
                 }
     
           ```
-         
-                  
-
       - (Update/PUT) Update user profile image
-       ```swift
-          let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
-                                          
-       ```                                                
+      
    - Chats Screen
       - (Read/GET) Query sender for each conversation ID
-      ```swift
-         let userInfo = Auth.auth().currentUser?.providerData[indexPath.row]
-
-      ```
       - (Read/GET) Query conversations for Reciever IDs
-      ```swift
-         let userInfo = Auth.auth().currentUser?.providerData[indexPath.row]
 
-      ```
    - Contacts Screen
       - (Read/GET) Query all users other than logged in user (sender ID)
-      ```swift
-         let receiverID = Auth.auth().currentUser?.providerData[indexPath.row]
-
-      ```
       - (Create/POST) Create a new conversation
-      ```swift
-          let createConversation = Auth.auth().currentUser?.createProfileChangeRequest()
-
-      ```
       - (Read/GET) Query conversations with contacts
-      ```swift
-         let conversationID = Auth.auth().currentUser?.providerData[indexPath.row]
-
-      ```
+   
    - Message Screen
       - (Read/GET) Query all messages in a conversation
-      ```swift
-        let messageID = Auth.auth().currentUser?.providerData[indexPath.row]
-        
-      ```
       - (Create/POST) Create a new message
-      ```swift
-         let createMessageID = Auth.auth().currentUser?.createProfileChangeRequest()
-
-      ```
       - (Read/GET) Query message isRead status
-      ```swift
-         let isRead = Auth.auth().currentUser?.providerData[indexPath.row]
-
-      ```
+ 
      
 
 
