@@ -113,7 +113,7 @@ The following **bonus** functionality is completed:
 ### Sprint 1 Video Walkthrough
 Here's a walkthrough of implemented user stories:
 
-<img src='https://imgur.com/kCv17UH.gif' title='Video Walkthrough' width='' alt='Video Walkthrough 1' />
+<img src='https://imgur.com/3uR45vS.gif' title='Video Walkthrough' width='' alt='Video Walkthrough 1' />
 
 ### Sprint 2 User Stories
 The following **required** functionality is completed:
