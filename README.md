@@ -139,7 +139,7 @@ The following **required** functionality is completed:
 ### Sprint 3 Video Walkthrough
 Here's a walkthrough of implemented user stories:
 
-<img src='https://imgur.com/OQ2yBPK.gif' title='Video Walkthrough' width='' alt='Video Walkthrough 3' />
+<img src='https://imgur.com/WEunMa3.gif' title='Video Walkthrough' width='' alt='Video Walkthrough 3' />
 
 
 ### Sprint 4 User Stories
