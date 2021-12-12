@@ -70,13 +70,13 @@ final class LoginViewController: UIViewController {
         return button
     }()
 
-    private let facebookLoginButton: FBLoginButton = {
-        let button = FBLoginButton()
-        button.permissions = ["email,public_profile"]
-        return button
-    }()
-
-    private let googleLogInButton = GIDSignInButton()
+//    private let facebookLoginButton: FBLoginButton = {
+//        let button = FBLoginButton()
+//        button.permissions = ["email,public_profile"]
+//        return button
+//    }()
+//
+//    private let googleLogInButton = GIDSignInButton()
 
     private var loginObserver: NSObjectProtocol?
 
@@ -116,9 +116,9 @@ final class LoginViewController: UIViewController {
         scrollView.addSubview(emailField)
         scrollView.addSubview(passwordField)
         scrollView.addSubview(loginButton)
-        scrollView.addSubview(facebookLoginButton)
-        scrollView.addSubview(googleLogInButton)
-        googleLogInButton.addTarget(self, action: #selector(googleSignInButtonTapped), for: .touchUpInside)
+//        scrollView.addSubview(facebookLoginButton)
+//        scrollView.addSubview(googleLogInButton)
+//        googleLogInButton.addTarget(self, action: #selector(googleSignInButtonTapped), for: .touchUpInside)
     }
 
     deinit {
