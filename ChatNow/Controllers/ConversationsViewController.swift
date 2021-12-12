@@ -5,10 +5,10 @@
 //  Created by Emmanuel on 12/12/21.
 //
 
-
 import UIKit
 import FirebaseAuth
 import JGProgressHUD
+
 
 /// Controller that shows list of conversations
 final class ConversationsViewController: UIViewController {
@@ -232,4 +232,5 @@ extension ConversationsViewController: UITableViewDelegate, UITableViewDataSourc
         }
     }
 }
+
 
