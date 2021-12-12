@@ -2,21 +2,95 @@
 //  AppDelegate.swift
 //  ChatNow
 //
-//  Created by Emmanuel on 11/4/21.
+//  Created by  Emmanuel on 12/12/21.
 //
 
 import UIKit
 import Firebase
+import FBSDKCoreKit
+import GoogleSignIn
 
-@main
+@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    public var signInConfig: GIDConfiguration?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        ApplicationDelegate.shared.application(
+            application,
+            didFinishLaunchingWithOptions: launchOptions
+        )
         return true
     }
+    
+    func application(
+        _ app: UIApplication,
+        open url: URL,
+        options: [UIApplication.OpenURLOptionsKey : Any] = [:]
+    ) -> Bool {
+        var handled: Bool
+        handled = GIDSignIn.sharedInstance.handle(url)
+        if handled {
+            return true
+        }
+        return false
+    }
+
+    func handleSessionRestore(user: GIDGoogleUser) {
+        guard let email = user.profile?.email,
+            let firstName = user.profile?.givenName,
+            let lastName = user.profile?.familyName else {
+                return
+        }
+
+        UserDefaults.standard.set(email, forKey: "email")
+        UserDefaults.standard.set("\(firstName) \(lastName)", forKey: "name")
+
+        DatabaseManager.shared.userExists(with: email, completion: { exists in
+            if !exists {
+                // insert to database
+                let chatUser = ChatAppUser(
+                    firstName: firstName,
+                    lastName: lastName,
+                    emailAddress: email
+                )
+                DatabaseManager.shared.insertUser(with: chatUser, completion: { success in
+                    if success {
+                        // upload image
+
+                        if user.profile?.hasImage == true {
+                            guard let url = user.profile?.imageURL(withDimension: 200) else {
+                                return
+                            }
+
+                            URLSession.shared.dataTask(with: url, completionHandler: { data, _, _ in
+                                guard let data = data else {
+                                    return
+                                }
+
+                                let filename = chatUser.profilePictureFileName
+                                StorageManager.shared.uploadProfilePicture(with: data, fileName: filename, completion: { result in
+                                    switch result {
+                                    case .success(let downloadUrl):
+                                        UserDefaults.standard.set(downloadUrl, forKey: "profile_picture_url")
+                                        print(downloadUrl)
+                                    case .failure(let error):
+                                        print("Storage maanger error: \(error)")
+                                    }
+                                })
+                            }).resume()
+                        }
+                    }
+                })
+            }
+        })
+
+        let authentication = user.authentication
+        guard let idToken = authentication.idToken else {
+            return
+        }
 
     // MARK: UISceneSession Lifecycle
 
@@ -34,4 +108,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
-
+}

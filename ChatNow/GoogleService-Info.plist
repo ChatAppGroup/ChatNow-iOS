@@ -19,16 +19,18 @@
 	<key>STORAGE_BUCKET</key>
 	<string>chatnow-ios.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:26052408143:ios:aca1cbf3a1aa3a01cd4b3a</string>
+	<key>DATABASE_URL</key>
+	<string>https://chatnow-ios-default-rtdb.firebaseio.com/</string>
 </dict>
 </plist>
