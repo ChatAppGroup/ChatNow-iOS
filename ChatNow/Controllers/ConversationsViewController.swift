@@ -9,7 +9,6 @@ import UIKit
 import FirebaseAuth
 import JGProgressHUD
 
-
 /// Controller that shows list of conversations
 final class ConversationsViewController: UIViewController {
 
