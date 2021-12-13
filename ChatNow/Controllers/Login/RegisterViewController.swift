@@ -22,7 +22,7 @@ final class RegisterViewController: UIViewController {
     private let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(systemName: "person.circle")
-        imageView.tintColor = .gray
+        imageView.tintColor = .green
         imageView.contentMode = .scaleAspectFit
         imageView.layer.masksToBounds = true
         imageView.layer.borderWidth = 2
@@ -300,7 +300,7 @@ extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationC
                                                 self?.presentCamera()
 
         }))
-        actionSheet.addAction(UIAlertAction(title: "Chose Photo",
+        actionSheet.addAction(UIAlertAction(title: "Choose Photo",
                                             style: .default,
                                             handler: { [weak self] _ in
 
