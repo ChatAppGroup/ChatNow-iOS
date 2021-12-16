@@ -88,11 +88,11 @@ An instant messaging service to send text messages, images, and video recordings
 <img src="https://i.imgur.com/6cn5tpG.jpg" width=600>
 
 
-### [BONUS] Digital Wireframes & Mockups
+### Digital Wireframes & Mockups
 
 <img src="https://imgur.com/oCJuP4C.gif" width=600>
 
-### [BONUS] Interactive Prototype
+### Interactive Prototype
 
 <img src="https://imgur.com/Meoz9Yj.gif" width=250><br>
 
